@@ -1,20 +1,18 @@
 {
-  "name": "bootstrap-chosen",
-  "version": "1.0.0",
-  "homepage": "https:\/\/github.com\/alxlit\/bootstrap-chosen",
+  "name": "bootstrap4-chosen",
+  "version": "2.0.0",
+  "homepage": "https:\/\/github.com\/Dinu\/bootstrap-chosen",
   "authors": [
-    "alxlit <alxlit+github@alxlit.name>"
+    "Dinu <dinu@imagin.io>"
   ],
-  "description": "An alternate stylesheet for Chosen (http://harvesthq.github.com/chosen/).",
+  "description": "An alternate stylesheet for Chosen (http://harvesthq.github.com/chosen/) for Bootstrap 4-alpha.",
   "keywords": [
     "bootstrap",
     "chosen"
   ],
   "license": "MIT",
   "main": [
-    "bootstrap-chosen-variables.less", 
     "bootstrap-chosen-variables.scss",
-    "bootstrap-chosen.less",
     "bootstrap-chosen.scss",
     "bootstrap-chosen.css",
     "chosen-sprite.png",
