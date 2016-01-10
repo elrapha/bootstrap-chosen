@@ -4,7 +4,8 @@
 // An alternate stylesheet for Chosen (http://harvesthq.github.com/chosen/).
 // This one is supposed to integrate better with Bootstrap.
 //
-// Submit bugfixes to: http://github.com/alxlit/bootstrap-chosen
+// Fork of http://github.com/alxlit/bootstrap-chosen to support Bootstrap v4-alpha
+// Submit bugfixes to: http://github.com/Dinu/bootstrap-chosen
 //
 
 @import "bootstrap-chosen-variables.scss";
@@ -47,7 +48,7 @@
 
     li {
       display: none;
-      line-height: $line-height-base; // 15px;
+      line-height: $chosen-line-height; // 15px;
       list-style: none;
       margin: 0;
       padding: 5px 6px;
@@ -105,7 +106,7 @@
 
     span {
       display: inline-block;
-      height: $line-height-base; // 17px;
+      height: $chosen-line-height; // 17px;
       text-indent: -5000px;
       width: 9px;
     }
@@ -141,7 +142,7 @@
     height: $chosen-height;
     overflow: hidden;
     line-height: $chosen-height;
-    padding: 0 0 0 8px;
+    padding: 0;
     position: relative;
     text-decoration: none;
     white-space: nowrap;
@@ -149,7 +150,9 @@
     span {
       display: block;
       margin-right: 26px;
-      @include text-overflow();
+      padding-left: $input-padding-x;
+      @include text-truncate();
+
     }
 
     abbr {
@@ -159,7 +162,7 @@
       height: 10px;
       position: absolute;
       right: 26px;
-      top: ($chosen-height - 10px) / 2;
+      top: 14px;
       width: 12px;
 
       &:hover {
@@ -175,7 +178,7 @@
       display: block;
       height: 100%;
       position: absolute;
-      top: 0;
+      top: 2px;
       right: 0;
       width: 18px;
 
@@ -259,9 +262,9 @@
         border: 0 !important;
         @include box-shadow(none);
         color: $gray;
-        height: $chosen-multi-height - 8px;
+        height: $chosen-multi-height;// - 8px;
         margin: 0;
-        padding: 4px;
+        padding: $input-padding-y $input-padding-x;
         outline: 0;
       }
 
@@ -284,7 +287,7 @@
       cursor: default;
       line-height: 13px;
       margin: 6px 0 3px 5px;
-      padding: 3px 20px 3px 5px;
+      padding: 5px 20px 5px 5px;
       position: relative;
 
       .search-choice-close {
@@ -294,7 +297,7 @@
         height: 10px;
         position: absolute;
         right: 4px;
-        top: 5px;
+        top: 7px;
         width: 12px;
         cursor: pointer;
 
@@ -382,12 +385,13 @@
   text-align: right;
 
   .chosen-single {
-    padding: 0 8px 0 0;
+    padding: 0;
     overflow: visible;
 
     span {
       margin-left: 26px;
       margin-right: 0;
+      padding-right: $input-padding-x;
       direction: rtl;
     }
 
@@ -413,7 +417,7 @@
 
     .search-choice {
       margin: 6px 5px 3px 0;
-      padding: 3px 5px 3px 19px;
+      padding: 5px 5px 5px 21px;
 
       .search-choice-close {
         background-position: right top;
