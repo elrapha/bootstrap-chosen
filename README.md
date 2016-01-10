@@ -1,27 +1,26 @@
-# bootstrap-chosen (less/sass)
+# bootstrap-chosen (sass)
 
-![](https://github.com/alxlit/bootstrap-chosen/raw/master/example.png)
+![](https://github.com/Dinu/bootstrap-chosen/raw/master/example.png)
 
-An alternate stylesheet for [Chosen 1.0](http://harvesthq.github.com/chosen/). This
-one is supposed to integrate better with [Bootstrap 3.0](http://getbootstrap.com/).
+An alternate stylesheet for [Chosen 1.0](http://harvesthq.github.com/chosen/). Fork of [Alxlit's repo](https://github.com/alxlit/bootstrap-chosen) to integrate better with [Bootstrap 4-alpha2](http://v4-alpha.getbootstrap.com/).
 
-[Here's the example page](http://alxlit.github.io/bootstrap-chosen/).
+[Here's the example page](http://Dinu.github.io/bootstrap-chosen/).
 
-How you add `bootstrap-chosen.less` to your build process is up to you. Just keep
-in mind that it needs access to `variables.less` and `mixins.less`.
+How you add `bootstrap-chosen.scss` to your build process is up to you. Just keep
+in mind that it needs access to `variables.scss` and `mixins.scss`.
 
 You can tinker with the example page by:
 
 ```
-$ git clone https://github.com/alxlit/bootstrap-chosen
+$ git clone https://github.com/Dinu/bootstrap-chosen
 $ cd bootstrap-chosen
-bootstrap-chosen $ git clone --depth=1 https://github.com/twbs/bootstrap
-bootstrap-chosen $ vi bootstrap/less/bootstrap.less
+bootstrap-chosen $ git clone --depth=1 --branch v4-dev https://github.com/twbs/bootstrap.git
+bootstrap-chosen $ vi bootstrap/scss/bootstrap.scss
 
 // Add this to the bottom
-@import "../../bootstrap-chosen.less";
+@import "../../bootstrap-chosen.scss";
 
-bootstrap-chosen $ lessc bootstrap/less/bootstrap.less > bootstrap.css
+bootstrap-chosen $ sass bootstrap/scss/bootstrap.scss bootstrap.css
 bootstrap-chosen $ firefox example.html
 ```
 
